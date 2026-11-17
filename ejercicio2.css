@@ -1,0 +1,54 @@
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    .escena {
+      width: 200px;
+      height: 200px;
+      perspective: 800px; 
+    }
+
+    .cubo {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(-20deg) rotateY(-40deg);
+    }
+    .cara, .sombra {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+
+    .cara {
+      border: 1px solid rgba(0,0,0,0.05); 
+    }
+
+    .frontal {
+      background-color: #ff0000;
+      transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .derecha {
+      background-color: #0000ff;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .superior {
+      background-color: #ffa500;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .sombra {
+      background-color: #ff00ff; 
+      transform: rotateX(90deg) translateZ(-100px) translateX(60px) translateY(60px);
+      z-index: -1;
+    }

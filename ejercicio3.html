@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="ejercicio3.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="nav-izquierda">
+      <!-- Logotipo nfti's -->
+      <a href="#" class="logo">
+        <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/logo.svg" alt="Mono NFT" class="logo-avatar">
+      </a>
+
+      <!-- Menú de enlaces -->
+      <ul class="nav-enlaces">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+             Jesus ejercicios
+            <svg class="icono-chevron" viewBox="0 0 24 24">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="indexcubo.html">ejercicio 2</a></li>
+            <li><a href="indexgato.html">ejercicio 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="ejercicio2.html" class="nav-link">Rodrigo ejercio 2</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Buscador y Redes Sociales -->
+    <div class="nav-derecha">
+      <div class="buscador-contenedor">
+        <input type="text" class="input-buscador" placeholder="Search ...">
+      </div>
+
+      <div class="redes-sociales">
+        <!-- Icono Facebook -->
+        <a href="#" class="red-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V6.65c0-1.05.29-1.73 1.76-1.73Z"/>
+          </svg>
+        </a>
+        <!-- Icono Instagram -->
+        <a href="#" class="red-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+    
+<div class="contenedor-principal">
+    
+    <header class="seccion-superior">
+      <div class="texto-principal">
+        <h1>
+          Easy Create & <br>
+          Sell Extraordinary <br>
+          NFT's 
+          <span class="icono-enlinea">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=f7d4d4" alt="Icono">
+          </span>
+        </h1>
+        <a href="#" class="enlace-acceso">Get Easy Access</a>
+      </div>
+
+      <!-- ZONA DE ARRASTRE DE IMÁGENES -->
+      <div class="imagenes-derecha" id="sliderArcos">
+        <span class="indicador-arrastre">← Arrastra hacia la izquierda</span>
+
+        <!-- Tarjeta 1 (Inicia al frente) -->
+        <div class="imagen-arco estado-frente">
+          <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/about-us-img-03.png" alt="NFT 1">
+        </div>
+
+        <!-- Tarjeta 2 (Inicia al fondo) -->
+        <div class="imagen-arco estado-fondo">
+          <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/ts-img-04.jpg" alt="NFT 2">
+        </div>
+
+        <!-- Tarjeta 3 (En espera) -->
+        <div class="imagen-arco estado-oculto">
+          <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2026/04/slider-img-02.png" alt="NFT 3">
+        </div>
+
+        <!-- Tarjeta 4 (En espera) -->
+        <div class="imagen-arco estado-oculto">
+          <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/about-us-img-01.png" alt="NFT 4">
+        </div>
+      </div>
+    </header>
+
+    <div class="tarjeta-amarilla">
+      <div class="info-tiempo">
+        <h2>Remaining Time</h2>
+        <p>It is a long established fact that a reader will distracted.</p>
+        
+        <div class="contador">
+          <div class="bloque-tiempo">
+            <strong>00</strong>
+            <span>Days</span>
+          </div>
+          <div class="bloque-tiempo">
+            <strong>11</strong>
+            <span>Hours</span>
+          </div>
+          <div class="bloque-tiempo">
+            <strong>07</strong>
+            <span>Minutes</span>
+          </div>
+          <div class="bloque-tiempo">
+            <strong>55</strong>
+            <span>Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-avatares">
+        <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/do-img-03.jpg" alt="Usuario 1" class="avatar">
+        <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/gl-img-02.jpg" alt="Usuario 2" class="avatar">
+        <img src="https://cms.googlycode.com/cms19/wp-content/uploads/2024/02/gl-img-03.jpg" alt="Usuario 3" class="avatar">
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const contenedorSlider = document.getElementById('sliderArcos');
+    const tarjetas = Array.from(contenedorSlider.querySelectorAll('.imagen-arco'));
+    
+    let indiceActual = 0;
+    let estaArrastrando = false;
+    let inicioX = 0;
+    let desplazamientoX = 0;
+    let enTransicion = false;
+
+    // Función que actualiza los estados CSS de cada tarjeta según el índice activo
+    function actualizarPosiciones() {
+      const total = tarjetas.length;
+      const indiceSiguiente = (indiceActual + 1) % total;
+
+      tarjetas.forEach((tarjeta, index) => {
+        tarjeta.classList.remove('arrastrando');
+        tarjeta.style.transform = '';
+
+        // Si solo tienes 2 tarjetas en tu HTML, se intercambian directamente frente y fondo
+        if (total === 2) {
+          if (index === indiceActual) {
+            tarjeta.className = 'imagen-arco estado-frente';
+          } else {
+            tarjeta.className = 'imagen-arco estado-fondo';
+          }
+          return;
+        }
+
+        // Si tienes 3 o más tarjetas, hace el ciclo completo con salida hacia la izquierda
+        const indiceAnterior = (indiceActual - 1 + total) % total;
+
+        if (index === indiceActual) {
+          tarjeta.className = 'imagen-arco estado-frente';
+        } else if (index === indiceSiguiente) {
+          tarjeta.className = 'imagen-arco estado-fondo';
+        } else if (index === indiceAnterior) {
+          tarjeta.className = 'imagen-arco estado-saliendo';
+        } else {
+          tarjeta.className = 'imagen-arco estado-oculto';
+        }
+      });
+    }
+
+    // Avanza a la siguiente imagen cuando se completa el arrastre a la izquierda
+    function cambiarSiguienteImagen() {
+      if (enTransicion) return;
+      enTransicion = true;
+
+      indiceActual = (indiceActual + 1) % tarjetas.length;
+      actualizarPosiciones();
+
+      setTimeout(() => {
+        enTransicion = false;
+      }, 650); // Tiempo sincronizado con los 0.65s del CSS
+    }
+
+    // --- EVENTOS DE MOUSE Y PANTALLA TÁCTIL ---
+    function iniciarArrastre(clientX) {
+      if (enTransicion) return;
+      estaArrastrando = true;
+      inicioX = clientX;
+      desplazamientoX = 0;
+      tarjetas[indiceActual].classList.add('arrastrando');
+    }
+
+    function moverArrastre(clientX) {
+      if (!estaArrastrando) return;
+      desplazamientoX = clientX - inicioX;
+
+      // Solo aplicamos seguimiento visual si arrastra hacia la izquierda (valores negativos)
+      if (desplazamientoX < 0) {
+        const rotacion = Math.max(desplazamientoX * 0.05, -12);
+        tarjetas[indiceActual].style.transform = `translateX(${desplazamientoX * 0.6}px) rotate(${rotacion}deg)`;
+      }
+    }
+
+    function finalizarArrastre() {
+      if (!estaArrastrando) return;
+      estaArrastrando = false;
+
+      const tarjetaActiva = tarjetas[indiceActual];
+      tarjetaActiva.classList.remove('arrastrando');
+      tarjetaActiva.style.transform = '';
+
+      // Si el usuario arrastró más de 50px hacia la izquierda, dispara el cambio de imagen
+      if (desplazamientoX < -50) {
+        cambiarSiguienteImagen();
+      }
+      desplazamientoX = 0;
+    }
+
+    // Eventos de Mouse
+    contenedorSlider.addEventListener('mousedown', (e) => iniciarArrastre(e.clientX));
+    window.addEventListener('mousemove', (e) => moverArrastre(e.clientX));
+    window.addEventListener('mouseup', finalizarArrastre);
+
+    // Eventos Táctiles (por si se prueba en móvil)
+    contenedorSlider.addEventListener('touchstart', (e) => iniciarArrastre(e.touches[0].clientX), { passive: true });
+    window.addEventListener('touchmove', (e) => moverArrastre(e.touches[0].clientX), { passive: true });
+    window.addEventListener('touchend', finalizarArrastre);
+  </script>
+</body>
+</html>
