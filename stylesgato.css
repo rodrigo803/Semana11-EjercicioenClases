@@ -1,0 +1,91 @@
+/* Proyecto NFT: transiciones y animaciones CSS */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #100a18;
+  color: #fff;
+}
+a { color: inherit; text-decoration: none; }
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  padding: 14px 5%;
+  background: #100c1a;
+  border-bottom: 1px solid #292038;
+  position: relative;
+  z-index: 10;
+}
+.cielo {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 48% 30%, #28d8fe80, transparent 18%), radial-gradient(ellipse at 40% 70%, #b50bea80, transparent 33%), radial-gradient(ellipse at 72% 0%, #64099e, transparent 35%), #11091b;
+}
+.nebulosa { position: absolute; inset: 0; opacity: .6; background-image: radial-gradient(white 1px,transparent 2px), radial-gradient(#a9e9ff 1px,transparent 2px); background-size: 65px 53px, 97px 71px; animation: brillar 4s ease-in-out infinite alternate; }
+.hero {
+  min-height: 570px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 54% 46%;
+  align-items: center;
+  background: linear-gradient(120deg, #ad0fae 0%, #93099b 46%, #570366 100%);
+  padding: 58px 7% 70px;
+  isolation: isolate;
+}
+.contenido { position: relative; z-index: 4; max-width: 700px; }
+.etiqueta { display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border: 1px solid #ea8af3; border-radius: 45px; letter-spacing: 3px; font-size: 13px; font-weight: bold; background: #ffffff0d; box-shadow: 0 0 18px #ee72ff77; }
+.etiqueta span { font-size: 20px; }
+h1 { font-size: clamp(43px, 5.5vw, 86px); line-height: 1.03; letter-spacing: -2px; margin: 28px 0; }
+.contenido p { max-width: 650px; font-size: clamp(16px, 1.35vw, 21px); color: #f4d8f5; line-height: 1.7; }
+.acciones { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 40px; }
+.boton { background: #8400ed; color: #ffffff; padding: 22px 32px; border-radius: 45px; font-size: 17px; font-weight: 800; border: 2px solid #cc60ff; box-shadow: 0 0 24px #cc32ff99; display: inline-flex; gap: 30px; align-items: center; transition: transform .35s ease, background .35s ease, box-shadow .35s ease; }
+.boton:hover { transform: translateY(-6px) scale(1.04); background: #a500ff; box-shadow: 0 8px 35px #ce39ffaa; }
+.demo { display: flex; align-items: center; gap: 15px; font-weight: 600; transition: color .3s, transform .3s; }
+.demo:hover { color: #f3b8ff; transform: translateX(5px); }
+.play { width: 45px; height: 45px; border: 2px solid #fff; border-radius: 50%; display: grid; place-items: center; font-size: 14px; }
+.escenario { position: absolute; width: 48%; height: calc(100% + 100px); right: 3%; bottom: -85px; pointer-events: none; z-index: 3; }
+.arco { position: absolute; left: 17%; bottom: 100px; width: 69%; height: 77%; border-radius: 48% 48% 0 0; background: linear-gradient(145deg, #190b2a, #22062c 75%); box-shadow: inset 0 0 42px #e141ff22; }
+.gato { position: absolute; width: auto; height: 87%; max-width: 90%; object-fit: contain; left: 50%; bottom: 110px; transform: translateX(-50%); filter: drop-shadow(0 0 25px #f28effaa); animation: flotar 3.8s ease-in-out infinite; z-index: 3; }
+.sombra-gato { position: absolute; left: 28%; bottom: 56px; height: 33px; width: 48%; border-radius: 50%; background: #08030c; box-shadow: 0 0 28px 14px #ea56ff, 0 0 58px 30px #a615d955; animation: sombra 3.8s ease-in-out infinite; }
+.orbita { position: absolute; left: 6%; top: 48%; width: 90%; height: 29%; border: 3px solid #ef77ff; border-radius: 50%; transform: rotate(-17deg); box-shadow: 0 0 14px #f67bff, inset 0 0 13px #fa84ff; opacity: .8; animation: orbitar 5s ease-in-out infinite alternate; }
+.orbita-dos { top: 60%; left: 8%; width: 83%; height: 19%; transform: rotate(9deg); opacity: .55; animation-delay: -2s; }
+.flechas { position: absolute; top: 23%; right: -2%; font-size: 52px; color: #eab2ff; line-height: .52; animation: flechas 1.6s infinite; }
+.abajo { text-align: center; padding: 85px 20px 55px; background: #100a18; }
+.abajo h2 { font-size: clamp(28px,4vw,44px); margin: 0 0 10px; }
+.abajo p { color: #b5a9c3; }
+.abajo a { color: #e8b2ff; display: inline-block; margin-top: 15px; transition: transform .3s; }
+.abajo a:hover { transform: translateY(-3px); }
+@keyframes flotar { 0%,100% { transform: translate(-50%,0); } 50% { transform: translate(-50%,-22px); } }
+@keyframes sombra { 0%,100% { transform: scale(1); opacity: .75; } 50% { transform: scale(.78); opacity: .4; } }
+@keyframes orbitar { from { transform: rotate(-18deg) translateY(0); opacity: .45; } to { transform: rotate(-9deg) translateY(-15px); opacity: .9; } }
+@keyframes flechas { 0%,100% { transform: translateY(0); opacity: .45; } 50% { transform: translateY(-12px); opacity: 1; } }
+@keyframes brillar { from { opacity: .3; } to { opacity: .85; } }
+@media (max-width: 1050px) {
+  .hero { grid-template-columns: 56% 44%; padding-left: 5%; }
+  h1 { font-size: clamp(40px,5.6vw,65px); }
+}
+@media (max-width: 720px) {
+  .cielo { height: 100px; }
+  .hero { display: flex; flex-direction: column; align-items: center; padding: 55px 6% 0; min-height: 900px; }
+  .contenido { align-self: stretch; }
+  .contenido p { font-size: 16px; }
+  h1 { font-size: clamp(42px,10vw,65px); }
+  .acciones { gap: 20px; margin-top: 28px; }
+  .boton { padding: 18px 23px; }
+  .escenario { position: relative; width: 100%; max-width: 480px; right: auto; bottom: auto; height: 470px; margin-top: 40px; }
+  .arco { bottom: 20px; height: 85%; }
+  .gato { bottom: 35px; height: 96%; }
+  .sombra-gato { bottom: 15px; }
+  .flechas { right: 0; }
+}
+@media (max-width: 400px) {
+  .hero { min-height: 810px; }
+  .etiqueta { font-size: 10px; padding: 12px 15px; }
+  .escenario { height: 380px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
